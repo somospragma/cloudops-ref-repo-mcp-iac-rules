@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "mcp-cloudops": {
+      "command": "/ruta/completa/al/proyecto/venv/bin/python",
+      "args": ["/ruta/completa/al/proyecto/mcp_stdio_server.py"],
+      "env": {
+        "PYTHONPATH": "/ruta/completa/al/proyecto"
+      }
+    }
+  }
+}
