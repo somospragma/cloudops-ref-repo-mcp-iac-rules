@@ -43,11 +43,8 @@ mcp-flask-server/
 │   ├── terraform_rules_seguridad_final.md
 │   ├── terraform_rules_documentacion_final.md
 │   └── terraform_prompt_maestro_final.md
-├── reglas_personalizadas.py       # Implementación completa de reglas IaC
 ├── mcp_stdio_server.py            # Servidor MCP principal con todas las herramientas
 ├── mcp_server.py                  # Servidor HTTP (versión original)
-├── test_iac_mcp.py               # Script de pruebas para funcionalidades IaC
-├── test_mcp.py                   # Script de pruebas básicas
 ├── requirements.txt              # Dependencias de Python
 └── README.md                     # Esta documentación
 ```
@@ -56,22 +53,22 @@ mcp-flask-server/
 
 ### 1. Preparar el entorno
 ```bash
-cd /Users/cristian.noguera/mcp-flask-server
+cd /ruta/completa/al/proyecto/mcp-flask-server
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
 
 ### 2. Configurar Amazon Q CLI
-Agregar a `/Users/cristian.noguera/.aws/amazonq/mcp.json`:
+Agregar a `/ruta/completa/al/proyecto/.aws/amazonq/mcp.json`:
 ```json
 {
   "mcpServers": {
     "mcp-cloudops": {
-      "command": "/Users/cristian.noguera/mcp-flask-server/venv/bin/python",
-      "args": ["/Users/cristian.noguera/mcp-flask-server/mcp_stdio_server.py"],
+      "command": "/ruta/completa/al/proyecto/mcp-flask-server/venv/bin/python",
+      "args": ["/ruta/completa/al/proyecto/mcp-flask-server/mcp_stdio_server.py"],
       "env": {
-        "PYTHONPATH": "/Users/cristian.noguera/mcp-flask-server"
+        "PYTHONPATH": "/ruta/completa/al/proyecto/mcp-flask-server"
       }
     }
   }
